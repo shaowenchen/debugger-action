@@ -1,0 +1,23 @@
+name: 'Your name here'
+description: 'Provide a description here'
+author: 'Your name or organization here'
+inputs:
+  frp_server_addr:
+    required: true
+    description: 'frp server addr'
+    default: ''
+  frp_server_port:
+    required: true
+    description: 'frp server port'
+    default: ''
+  frp_token:
+    required: true
+    description: 'frp token'
+    default: ''
+  ssh_port:
+    required: true
+    description: 'ss  port'
+    default: '2222'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
