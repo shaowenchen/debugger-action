@@ -1,6 +1,6 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'A debugger for actions'
+description: 'A debugger for debugging actions online. It allows the user to login the action env and execute commands using ssh.'
+author: 'shaowenchen'
 inputs:
   frp_server_addr:
     required: true
