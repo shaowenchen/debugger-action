@@ -42,18 +42,18 @@ async function writeInit(
   frp_token: string,
   ssh_port: string
 ): Promise<string> {
-  const config = {
-    common: {
-      server_addr: frp_server_addr,
-      server_port: frp_server_port,
-      token: frp_token
-    },
-    ssh: {
-      type: 'tcp',
-      local_ip: '127.0.0.1',
-      local_port: 8000,
-      remote_port: ssh_port
-    }
+  const config = Object()
+  config['common'] = {
+    server_addr: frp_server_addr,
+    server_port: frp_server_port,
+    token: frp_token
+  }
+  const ssh_port_special = util.format('ssh-%s', ssh_port)
+  config[ssh_port_special] = {
+    type: 'tcp',
+    local_ip: '127.0.0.1',
+    local_port: 8000,
+    remote_port: ssh_port
   }
   await writeFileAsync(path, ini.stringify(config))
   return path
