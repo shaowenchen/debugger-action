@@ -8,6 +8,14 @@
 
 1. Set up your credentials as secrets in your repository settings using `FRP_SERVER_ADDR`, `FRP_SERVER_PORT`, `FRP_TOKEN`, `SSH_PORT`
 
+|  Secrets   | Frp Server  |
+|  ----  | ----  |
+| `FRP_SERVER_ADDR`  | You Server IP |
+| `FRP_SERVER_PORT`  | Bind port |
+| `FRP_TOKEN`        | token |
+
+`SSH_PORT` is used to login the runner, a custom set , e.g 20090 .
+
 2. Add the following to your workflow
 
 ```yml
@@ -68,8 +76,6 @@ The length of time you want to debug the action.
 ### `ssh_port`
 
 **Required** Port to login the runner
-
-
 
 ## License
 
