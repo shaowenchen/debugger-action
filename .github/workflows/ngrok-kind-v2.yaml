@@ -14,4 +14,5 @@ jobs:
         continue-on-error: true
         with:
           ngrok_token: ${{ secrets.NGROK_TOKEN }}
-      
+          ngrok_addr_1: ${{ secrets.EXPORT_PORT }}
+          ngrok_proto_1: http
