@@ -1,4 +1,4 @@
-name: 'actions'
+name: frp
 on:
   pull_request:
   push:
@@ -8,7 +8,7 @@ on:
       - 'releases/*'
 
 jobs:
-  actions:
+  frp:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

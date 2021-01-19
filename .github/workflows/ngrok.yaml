@@ -1,0 +1,24 @@
+name: ngrok
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - dev
+      - 'releases/*'
+
+jobs:
+  ngrok:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: build
+        run: |
+          npm install
+          npm run all
+      - uses: ./
+        name: test actions
+        timeout-minutes: 2
+        continue-on-error: true
+        with:
+          ngrok_token: ${{ secrets.NGROK_TOKEN }}

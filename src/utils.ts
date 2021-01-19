@@ -1,5 +1,6 @@
 import * as os from 'os'
 import * as toolCache from '@actions/tool-cache'
+import * as exec from '@actions/exec'
 
 export function getExecutableExtension(): string {
   if (os.type().match(/^Win/)) {
@@ -46,4 +47,15 @@ export async function downloadCache(
     await toolCache.cacheFile(cachePath, fullName, name, version)
   }
   return cachePath
+}
+
+export async function execCmdList(cmdList: string[]): Promise<string> {
+  return new Promise(resolve => {
+    ;(async function () {
+      for (const item of cmdList) {
+        await exec.exec(item)
+      }
+    })()
+    setTimeout(() => resolve('exec done!'), 1000)
+  })
 }

@@ -3,21 +3,25 @@ description: 'A debugger for debugging actions online. It allows the user to log
 author: 'shaowenchen'
 inputs:
   frp_server_addr:
-    required: true
+    required: false
     description: 'frp server addr'
     default: ''
   frp_server_port:
-    required: true
+    required: false
     description: 'frp server port'
     default: ''
   frp_token:
-    required: true
+    required: false
     description: 'frp token'
     default: ''
   ssh_port:
-    required: true
-    description: 'ss  port'
-    default: '2222'
+    required: false
+    description: 'ssh port to login'
+    default: ''
+  ngrok_token:
+    required: false
+    description: 'ngrok token'
+    default: ''
 runs:
   using: 'node12'
   main: 'dist/index.js'
