@@ -1,0 +1,17 @@
+name: example-frp-macos-shell-v2
+on:
+  workflow_dispatch:
+
+jobs:
+  example-frp-macos-shell-v2:
+    runs-on: macos-latest
+    steps:
+      - uses: shaowenchen/debugger-action@v2
+        name: debugger
+        timeout-minutes: 30
+        continue-on-error: true
+        with:
+          frp_server_addr: ${{ secrets.FRP_SERVER_ADDR }}
+          frp_server_port: ${{ secrets.FRP_SERVER_PORT }}
+          frp_token: ${{ secrets.FRP_TOKEN }}
+          ssh_port: 29004
