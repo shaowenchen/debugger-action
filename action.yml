@@ -22,14 +22,6 @@ inputs:
     required: false
     description: 'ngrok token'
     default: ''
-  user:
-    required: false
-    description: 'change user password'
-    default: ''
-  password:
-    required: false
-    description: 'change user password'
-    default: '@shaowenchen'
 runs:
   using: 'node12'
   main: 'dist/index.js'
