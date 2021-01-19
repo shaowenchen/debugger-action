@@ -28,7 +28,7 @@ Two types of proxies are supported:
 
 3. Run your workflow and login the runner
 
-In the log of GitHub Actions, you can see that:
+In the log of GitHub Actions, find **localhost:8000** and you can see that:
 
 ```txt
 t=2021-01-19T03:57:10+0000 lvl=info msg="started tunnel" obj=tunnels name=command_line addr=//localhost:8000 url=tcp://2.tcp.ngrok.io:16400
@@ -60,6 +60,29 @@ work
 #### `ngrok_token`
 
 **Required** Authenticate to  ngrok agent.
+
+#### `ngrok_proto_{x}` and `ngrok_proto_{x}`
+
+x in [1, 2, 3] , e.g:
+
+```yaml
+- uses: shaowenchen/debugger-action@v2
+  name: debugger
+  timeout-minutes: 30
+  continue-on-error: true
+  with:
+    ngrok_token: ${{ secrets.NGROK_TOKEN }}
+    ngrok_addr_1: 30000
+    ngrok_proto_1: tcp
+    ngrok_addr_2: 30001
+    ngrok_proto_2: tcp
+    ngrok_addr_3: 30002
+    ngrok_proto_3: tcp
+```
+
+It will expose these services to Ngrok. The maximum number of tunnels is 3, and http will take up 2 .
+
+#### 
 
 ## How to use by Frp Server
 
