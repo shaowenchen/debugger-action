@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: shaowenchen/debugger-action@v2
         name: debugger
-        timeout-minutes: 30
+        timeout-minutes: 300
         continue-on-error: true
         with:
           frp_server_addr: ${{ secrets.FRP_SERVER_ADDR }}
