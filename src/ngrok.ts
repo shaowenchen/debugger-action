@@ -82,7 +82,11 @@ export async function ngrok(NGROK_TOKEN: string): Promise<string> {
   writeTunnel(cfgFile, NGROK_TOKEN)
   const cmdList = [
     util.format('chmod +x %s/ngrok', execPath),
-    util.format('%s/ngrok  start --all --config  %s --log "stdout"', execPath, cfgFile)
+    util.format(
+      '%s/ngrok  start --all --config  %s --log "stdout"',
+      execPath,
+      cfgFile
+    )
   ]
   return new Promise(resolve => {
     ;(async function () {
