@@ -1,0 +1,17 @@
+name: example-ngrok-kind-v2
+on:
+  workflow_dispatch:
+
+jobs:
+  example-ngrok-kind-v2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Creating kind cluster
+        uses: helm/kind-action@v1.0.0-rc.1
+      - uses: shaowenchen/debugger-action@v2
+        name: debugger
+        timeout-minutes: 30
+        continue-on-error: true
+        with:
+          ngrok_token: ${{ secrets.NGROK_TOKEN }}
+      
