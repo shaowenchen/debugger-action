@@ -10,7 +10,7 @@ jobs:
         uses: docker/setup-buildx-action@v1
       - uses: shaowenchen/debugger-action@v2
         name: debugger
-        timeout-minutes: 30
+        timeout-minutes: 300
         continue-on-error: true
         with:
           ngrok_token: ${{ secrets.NGROK_TOKEN }}
