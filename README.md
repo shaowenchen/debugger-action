@@ -13,7 +13,7 @@ Two types of proxies are supported:
 
 ### Usage
 
-1. Set up your credentials as secrets in your repository settings using `NGROK_TOKEN`
+1. Set up your `Ngrok Authtoken` as secrets in your repository settings using `NGROK_TOKEN` .
 
 2. Add the following to your workflow
 
