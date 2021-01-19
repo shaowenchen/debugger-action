@@ -22,6 +22,30 @@ inputs:
     required: false
     description: 'ngrok token'
     default: ''
+  ngrok_addr_1:
+    required: false
+    description: 'ngrok addr 1 to tunnel'
+    default: ''
+  ngrok_proto_1:
+    required: false
+    description: 'ngrok proto 1 to tunnel'
+    default: ''
+  ngrok_addr_2:
+    required: false
+    description: 'ngrok addr 2 to tunnel'
+    default: ''
+  ngrok_proto_2:
+    required: false
+    description: 'ngrok proto 2 to tunnel'
+    default: ''
+  ngrok_addr_3:
+    required: false
+    description: 'ngrok addr 3 to tunnel'
+    default: ''
+  ngrok_proto_3:
+    required: false
+    description: 'ngrok proto 3 to tunnel'
+    default: ''
 runs:
   using: 'node12'
   main: 'dist/index.js'

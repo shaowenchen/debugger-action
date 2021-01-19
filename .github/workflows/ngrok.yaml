@@ -22,3 +22,9 @@ jobs:
         continue-on-error: true
         with:
           ngrok_token: ${{ secrets.NGROK_TOKEN }}
+          ngrok_addr_1: 30000
+          ngrok_proto_1: tcp
+          ngrok_addr_2: 30001
+          ngrok_proto_2: tcp
+          ngrok_addr_3: 30002
+          ngrok_proto_3: tcp
