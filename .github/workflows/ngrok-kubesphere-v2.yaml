@@ -10,8 +10,8 @@ jobs:
         uses: helm/kind-action@v1.0.0-rc.1
       - name: Install KubeSphere
         run: |
-          kubectl apply -f https://github.com/kubesphere/ks-installer/releases/download/v3.0.0/kubesphere-installer.yaml
-          kubectl apply -f https://github.com/kubesphere/ks-installer/releases/download/v3.0.0/cluster-configuration.yaml
+          kubectl apply -f https://github.com/kubesphere/ks-installer/releases/download/v3.1.1/kubesphere-installer.yaml
+          kubectl apply -f https://github.com/kubesphere/ks-installer/releases/download/v3.1.1/cluster-configuration.yaml
       - name: Expose Port for Kind
         run: |
           export ID=`docker ps | awk '{print $1}' | sed -n '2p'`
