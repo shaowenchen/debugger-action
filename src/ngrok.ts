@@ -10,7 +10,7 @@ import {promisify} from 'util'
 const writeFileAsync = promisify(writeFile)
 
 const name = 'ngrok'
-const defaultVersion = '4VmDzA7iaHb'
+const defaultVersion = 'bNyj1mQVY4c'
 const fileSufix = '.zip'
 const downloadUrlScheme = 'https://bin.equinox.io/c/%s/%s%s'
 
