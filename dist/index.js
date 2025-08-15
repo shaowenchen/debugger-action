@@ -227,14 +227,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ngrok = void 0;
-const util = __importStar(__nccwpck_require__(9023));
-const exec = __importStar(__nccwpck_require__(5236));
 const core = __importStar(__nccwpck_require__(7484));
+const exec = __importStar(__nccwpck_require__(5236));
 const toolCache = __importStar(__nccwpck_require__(3472));
-const utils_1 = __nccwpck_require__(9277);
-const yaml_1 = __importDefault(__nccwpck_require__(434));
 const fs_1 = __nccwpck_require__(9896);
+const util = __importStar(__nccwpck_require__(9023));
 const util_1 = __nccwpck_require__(9023);
+const yaml_1 = __importDefault(__nccwpck_require__(434));
+const utils_1 = __nccwpck_require__(9277);
 const writeFileAsync = (0, util_1.promisify)(fs_1.writeFile);
 const name = 'ngrok';
 const defaultVersion = 'bNyj1mQVY4c';
@@ -246,6 +246,7 @@ function getFullName() {
 function writeTunnel(path, token) {
     return __awaiter(this, void 0, void 0, function* () {
         const config = Object();
+        config['version'] = '2';
         config['authtoken'] = token;
         config['tunnels'] = {
             'tcp-8000': {

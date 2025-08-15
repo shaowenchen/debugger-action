@@ -1,11 +1,11 @@
-import * as util from 'util'
-import * as exec from '@actions/exec'
 import * as core from '@actions/core'
+import * as exec from '@actions/exec'
 import * as toolCache from '@actions/tool-cache'
-import {downloadCache, getOsType} from './utils'
+import { writeFile } from 'fs'
+import * as util from 'util'
+import { promisify } from 'util'
 import YAML from 'yaml'
-import {writeFile} from 'fs'
-import {promisify} from 'util'
+import { downloadCache, getOsType } from './utils'
 
 const writeFileAsync = promisify(writeFile)
 
@@ -20,6 +20,7 @@ function getFullName(): string {
 
 async function writeTunnel(path: string, token: string): Promise<string> {
   const config = Object()
+  config['version'] = '2'
   config['authtoken'] = token
   config['tunnels'] = {
     'tcp-8000': {
