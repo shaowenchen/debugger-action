@@ -1,7 +1,7 @@
 import * as core from '@actions/core'
-import {frp} from './frpc'
-import {ngrok} from './ngrok'
-import {sshd} from './sshd'
+import { frp } from './frpc'
+import { ngrok } from './ngrok'
+import { sshd } from './sshd'
 async function run(): Promise<void> {
   try {
     const frp_server_addr: string = core.getInput('frp_server_addr')

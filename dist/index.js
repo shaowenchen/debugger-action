@@ -52,7 +52,7 @@ const ini_1 = __importDefault(__nccwpck_require__(2616));
 const utils_1 = __nccwpck_require__(9277);
 const writeFileAsync = (0, util_1.promisify)(fs_1.writeFile);
 const name = 'frpc';
-const defaultVersion = '0.34.3';
+const defaultVersion = '0.64.0';
 const fileSufix = (0, utils_1.getArchivedExtension)();
 const downloadUrlScheme = 'https://github.com/fatedier/frp/releases/download/v%s/%s%s';
 function getFullName(version) {

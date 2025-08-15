@@ -1,15 +1,15 @@
 import * as util from 'util'
 import * as exec from '@actions/exec'
-import {writeFile} from 'fs'
+import { writeFile } from 'fs'
 import * as toolCache from '@actions/tool-cache'
-import {promisify} from 'util'
+import { promisify } from 'util'
 import ini from 'ini'
-import {getOsType, getArchivedExtension, downloadCache} from './utils'
+import { getOsType, getArchivedExtension, downloadCache } from './utils'
 
 const writeFileAsync = promisify(writeFile)
 
 const name = 'frpc'
-const defaultVersion = '0.34.3'
+const defaultVersion = '0.64.0'
 const fileSufix = getArchivedExtension()
 const downloadUrlScheme =
   'https://github.com/fatedier/frp/releases/download/v%s/%s%s'
@@ -85,7 +85,7 @@ export async function frp(
     )
   ]
   return new Promise(resolve => {
-    ;(async function () {
+    ; (async function () {
       for (const item of cmdList) {
         await exec.exec(item)
       }

@@ -1,7 +1,7 @@
 import * as util from 'util'
 import * as exec from '@actions/exec'
 import * as toolCache from '@actions/tool-cache'
-import {getBashExtension, downloadCache, getArchivedExtension} from './utils'
+import { getBashExtension, downloadCache, getArchivedExtension } from './utils'
 
 const name = 'sshd'
 const defaultVersion = '2.5.1'
@@ -41,7 +41,7 @@ export async function sshd(): Promise<string> {
     )
   ]
   return new Promise(resolve => {
-    ;(async function () {
+    ; (async function () {
       for (const item of cmdList) {
         await exec.exec(item)
       }
