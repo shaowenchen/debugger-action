@@ -51,7 +51,7 @@ export async function downloadCache(
 
 export async function execCmdList(cmdList: string[]): Promise<string> {
   return new Promise(resolve => {
-    ;(async function () {
+    ; (async function () {
       for (const item of cmdList) {
         await exec.exec(item)
       }

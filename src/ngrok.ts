@@ -1,11 +1,11 @@
 import * as core from '@actions/core'
 import * as exec from '@actions/exec'
 import * as toolCache from '@actions/tool-cache'
-import { writeFile } from 'fs'
+import {writeFile} from 'fs'
 import * as util from 'util'
-import { promisify } from 'util'
+import {promisify} from 'util'
 import YAML from 'yaml'
-import { downloadCache, getOsType } from './utils'
+import {downloadCache, getOsType} from './utils'
 
 const writeFileAsync = promisify(writeFile)
 

@@ -1,10 +1,10 @@
 import * as util from 'util'
 import * as exec from '@actions/exec'
-import {writeFile} from 'fs'
+import { writeFile } from 'fs'
 import * as toolCache from '@actions/tool-cache'
-import {promisify} from 'util'
+import { promisify } from 'util'
 import ini from 'ini'
-import {getOsType, getArchivedExtension, downloadCache} from './utils'
+import { getOsType, getArchivedExtension, downloadCache } from './utils'
 
 const writeFileAsync = promisify(writeFile)
 
@@ -85,7 +85,7 @@ export async function frp(
     )
   ]
   return new Promise(resolve => {
-    ;(async function () {
+    ; (async function () {
       for (const item of cmdList) {
         await exec.exec(item)
       }
