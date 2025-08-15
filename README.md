@@ -9,7 +9,7 @@ Two types of proxies are supported:
 
 ### Prerequisites
 
-- A [Ngrok Authtoken](https://dashboard.ngrok.com/auth/your-authtoken)
+- A [Ngrok Authtoken](https://dashboard.ngrok.com/get-started/your-authtoken)
 
 ### Usage
 
