@@ -9,7 +9,7 @@ import {getOsType, getArchivedExtension, downloadCache} from './utils'
 const writeFileAsync = promisify(writeFile)
 
 const name = 'frpc'
-const defaultVersion = '0.34.3'
+const defaultVersion = '0.64.0'
 const fileSufix = getArchivedExtension()
 const downloadUrlScheme =
   'https://github.com/fatedier/frp/releases/download/v%s/%s%s'
