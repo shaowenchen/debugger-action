@@ -1,6 +1,6 @@
 {
   "name": "debugger-action",
-  "version": "3.0.0",
+  "version": "2.0.0",
   "private": true,
   "description": "A debugger for debugging actions online. It allows the user to login the action env and execute commands using ssh.",
   "main": "lib/main.js",
